@@ -3,101 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DapurKita - Cari Resep Makanan</title>
+    <!-- Judul tab browser diubah menjadi Dapurmu -->
+    <title>Dapurmu - Cari Resep Makanan</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar">
+        <!-- Logo diubah menjadi Dapurmu -->
         <div class="logo">
-            <i class="fas fa-utensils"></i> DapurKita
+            <i class="fas fa-utensils"></i> Dapurmu
         </div>
         <div class="nav-actions">
-            <!-- Tombol Dark/Light Mode -->
             <button id="theme-toggle" class="icon-btn" title="Ganti Tema">
                 <i class="fas fa-moon"></i>
             </button>
-            
-            <!-- Area User / Login -->
             <div id="auth-section">
                 <button id="open-login-btn" class="btn-primary">Masuk</button>
             </div>
         </div>
     </nav>
-
-    <!-- Hero & Pencarian -->
-    <header class="hero">
-        <h1>Temukan Resep Favoritmu</h1>
-        <p>Cari ribuan resep masakan dari seluruh dunia dalam hitungan detik.</p>
-        
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="Ketik nama makanan (contoh: Chicken, Beef, Cake, Pasta)...">
-            <button id="search-btn"><i class="fas fa-search"></i> Cari</button>
-        </div>
-
-        <!-- Kategori Cepat -->
-        <div class="quick-tags">
-            <span>Populer:</span>
-            <button class="tag-btn" data-query="Chicken">Ayam</button>
-            <button class="tag-btn" data-query="Beef">Daging Sapi</button>
-            <button class="tag-btn" data-query="Seafood">Seafood</button>
-            <button class="tag-btn" data-query="Dessert">Dessert</button>
-            <button class="tag-btn" data-query="Vegetarian">Vegetarian</button>
-        </div>
-    </header>
-
-    <!-- Kontainer Hasil Pencarian -->
-    <main class="container">
-        <h2 id="section-title">Rekomendasi Resep Hari Ini</h2>
-        <div id="loader" class="loader hidden">Mencari resep...</div>
-        <div id="recipe-grid" class="recipe-grid">
-            <!-- Kartu resep akan muncul di sini via JavaScript -->
-        </div>
-    </main>
-
-    <!-- Modal Detail Resep -->
-    <div id="recipe-modal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close-modal" id="close-recipe-modal">&times;</span>
-            <div id="recipe-detail-body">
-                <!-- Detail resep dimuat di sini -->
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Login / Daftar -->
-    <div id="login-modal" class="modal hidden">
-        <div class="modal-content auth-box">
-            <span class="close-modal" id="close-login-modal">&times;</span>
-            <h2 id="auth-title">Masuk ke Akun</h2>
-            <p class="auth-subtitle">Simpan resep favoritmu dengan masuk ke akun.</p>
-            
-            <form id="auth-form">
-                <div class="input-group" id="name-group" style="display: none;">
-                    <label for="username">Nama Lengkap</label>
-                    <input type="text" id="username" placeholder="Masukkan nama Anda">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required placeholder="nama@email.com">
-                </div>
-                <div class="input-group">
-                    <label for="password">Kata Sandi</label>
-                    <input type="password" id="password" required placeholder="Minimal 6 karakter">
-                </div>
-                <button type="submit" class="btn-primary full-width" id="auth-submit-btn">Masuk</button>
-            </form>
-
-            <p class="toggle-auth">
-                <span id="toggle-text">Belum punya akun?</span> 
-                <a href="#" id="toggle-auth-mode">Daftar sekarang</a>
-            </p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
